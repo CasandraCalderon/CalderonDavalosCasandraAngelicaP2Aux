@@ -48,5 +48,7 @@ for (let i = 0; i < game.players[0].length; i++) {
 for (let j = 0; j < game.players[1].length; j++) {
   players2.push(game.players[1][j]);
 };
-console.log(players1);
-console.log(players2);
+const gk = players1.shift();
+const fieldPlayers = players1;
+console.log(gk);
+console.log(fieldPlayers);
