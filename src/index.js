@@ -90,5 +90,11 @@ switch (true) {
     console.log('Sera empate');
 };
 
-
+let promedio = 0;
+let div = 0;
+for (let clave in game.odds){
+  promedio = promedio + game.odds[clave];
+  div ++;
+}
+console.log(promedio / div);
 
