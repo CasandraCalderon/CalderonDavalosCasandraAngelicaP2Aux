@@ -77,6 +77,18 @@ const printGoals = (cadena) => {
   respuesta = respuesta.toString();
   return respuesta.replace(/,/g, '\n');
 };
-console.log(printGoals('Gnarby,Hummels,Lewandowski'));
+//console.log(printGoals('Gnarby,Hummels,Lewandowski'));
+
+switch (true) {
+  case team1<team2 && team1<draw:
+    console.log('El equipo 1 ganara');
+    break;
+  case team2<team1 && team2<draw:
+    console.log('El equipo 2 ganara');
+    break;
+  default :
+    console.log('Sera empate');
+};
+
 
 
