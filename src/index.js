@@ -49,7 +49,10 @@ for (let j = 0; j < game.players[1].length; j++) {
   players2.push(game.players[1][j]);
 };
 const gk = players1.shift();
+
 const fieldPlayers = players1;
 
 const allPlayers = game.players;
-console.log(allPlayers);
+
+const players1Final = [gk,...players1, 'Thiago', 'Coutinho', 'Perisic'];
+console.log(players1Final);
