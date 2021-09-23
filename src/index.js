@@ -55,4 +55,11 @@ const fieldPlayers = players1;
 const allPlayers = game.players;
 
 const players1Final = [gk,...players1, 'Thiago', 'Coutinho', 'Perisic'];
-console.log(players1Final);
+
+const team1 = game.odds.team1;
+const draw = game.odds.x;
+const team2 = game.odds.team2;
+console.log(team1);
+console.log(draw);
+console.log(team2);
+
