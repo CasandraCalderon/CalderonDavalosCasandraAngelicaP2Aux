@@ -52,14 +52,31 @@ const gk = players1.shift();
 
 const fieldPlayers = players1;
 
-const allPlayers = game.players;
+const allPlayers = players1.concat(gk, players2);
 
 const players1Final = [gk,...players1, 'Thiago', 'Coutinho', 'Perisic'];
 
 const team1 = game.odds.team1;
 const draw = game.odds.x;
 const team2 = game.odds.team2;
-console.log(team1);
-console.log(draw);
-console.log(team2);
+
+const printGoals = (cadena) => {
+  let jugadores = cadena.split(',');
+  let respuesta = [];
+  for(let i = 0; i < jugadores.length; i++){
+    let cont = 0;
+    for (let j = 0; j < game.scored.length; j++){
+      if(jugadores[i] === game.scored[j]){
+        cont ++;
+      }
+    }
+    if (cont > 0){
+      respuesta.push(`${jugadores[i]} : ${cont}`);
+    };
+  }
+  respuesta = respuesta.toString();
+  return respuesta.replace(/,/g, '\n');
+};
+console.log(printGoals('Gnarby,Hummels,Lewandowski'));
+
 
