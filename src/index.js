@@ -50,5 +50,6 @@ for (let j = 0; j < game.players[1].length; j++) {
 };
 const gk = players1.shift();
 const fieldPlayers = players1;
-console.log(gk);
-console.log(fieldPlayers);
+
+const allPlayers = game.players;
+console.log(allPlayers);
