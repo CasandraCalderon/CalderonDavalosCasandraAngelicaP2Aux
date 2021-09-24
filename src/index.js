@@ -105,7 +105,34 @@ array.forEach(function(arrayContenido) {
       repetidos[arrayContenido] = (repetidos[arrayContenido] || 0) + 1;
 });
 
-console.log(repetidos);
+//console.log(repetidos);
+
+const gameEvents = new Map([
+  [17, 'GOAL'],
+  [36, 'Substitution'],
+  [47, 'GOAL'],
+  [61, 'Substitution'],
+  [64, 'Yellow card'],
+  [69, 'Red card'],
+  [70, 'Substitution'],
+  [72, 'Substitution'],
+  [76, 'GOAL'],
+  [80, 'GOAL'],
+  [92, 'Yellow card'],
+]);
+
+
+function evalues (events){
+  let tiempo = 0; 
+  for (var [key, value] of events) {
+    tiempo = key - tiempo;
+    console.log(`Un evento ocurrio : ${value}, en promedio : ${key}, cada ${tiempo} minutos`)
+  }
+}
+evalues(gameEvents);
+
+
+
 
 
 
