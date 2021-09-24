@@ -96,5 +96,16 @@ for (let clave in game.odds){
   promedio = promedio + game.odds[clave];
   div ++;
 }
-console.log(promedio / div);
+//console.log(promedio / div);
+
+let array = game.scored;
+let repetidos = {}
+
+array.forEach(function(arrayContenido) {
+      repetidos[arrayContenido] = (repetidos[arrayContenido] || 0) + 1;
+});
+
+console.log(repetidos);
+
+
 
